@@ -94,6 +94,7 @@
   align-items: center;
   padding: var(--Sizes-12px) var(--Sizes-40px) var(--Sizes-12px)
     var(--Sizes-12px);
+  cursor: pointer;
 }
 
 #title01 svg,
