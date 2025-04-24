@@ -1,6 +1,8 @@
 nav {
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "right center left";
   justify-content: center;
   align-items: center;
   gap: var(--Sizes-12px);
@@ -17,7 +19,7 @@ nav {
 }
 
 /* Buttons */
-button {
+nav .nav-item button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,13 +31,23 @@ button {
   transition: transform 0.2s ease;
 }
 
-button:hover {
+nav .nav-item button:hover {
   transform: scale(1.15);
 }
 
-button img {
+nav .nav-item button img {
   width: var(--Sizes-36px);
   height: var(--Sizes-36px);
+}
+
+.nav-left {
+  grid-area: left;
+}
+.nav-center {
+  grid-area: center;
+}
+.nav-right {
+  grid-area: right;
 }
 
 /* Extra Large Screens (Desktops, Large Monitors) */
